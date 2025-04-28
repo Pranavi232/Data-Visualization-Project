@@ -92,3 +92,11 @@ The codebase is primarily written in JavaScript using the D3.js library for data
         - D3.js v7 for dynamic visualizations.
         - GeoJSON data for world map rendering.
 All visualizations are interactive, responsive, and animated to enhance storytelling and data understanding.
+
+- Screenshots of all the Visualizations:
+- Scatter plot:
+- ![image](https://github.com/user-attachments/assets/74822e0b-a6ab-42d1-b94e-b184147c01d5)
+
+- BarChart: ![image](https://github.com/user-attachments/assets/81e64690-5e24-4d58-8736-e5a27d9dc1af)
+
+- Choropleth: ![image](https://github.com/user-attachments/assets/f6f5410c-fe0c-4358-b515-def80a2311ec)
