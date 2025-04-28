@@ -51,6 +51,8 @@ The project uses D3.js to create fully interactive visualizations, allowing user
 - Interactive Elements: Tooltip showing country name, Stress % value, and its global rank.
 
 ---
+### Screenshot of Framework:
+![image](https://github.com/user-attachments/assets/18b19b61-bcf7-4c2a-a99a-cd4825b8242a)
 
 ## Visualizations Used (and Explained)
 - Scatter Plot: Shows the relationship between two quantitative variables (Depression and Anxiety rates).
