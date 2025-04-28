@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mental Health Visualizations</title>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      text-align: center;
+    }
+    .plot {
+      display: none;
+    }
+    .active {
+      display: block;
+    }
+    .button-container {
+      margin-bottom: 20px;
+    }
+    button, select {
+      padding: 10px 20px;
+      margin: 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .tooltip {
+      position: absolute;
+      background-color: white;
+      border: 1px solid #ccc;
+      padding: 8px 12px;
+      font-size: 13px;
+      pointer-events: none;
+      opacity: 0;
+      border-radius: 6px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      transform: translateY(5px);
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>Mental Health Visualizations</h1>
+
+<div class="button-container">
+  <button onclick="showPlot('scatterPlot')">Scatter Plot</button>
+  <button onclick="showPlot('barChart')">Bar Chart</button>
+  <button onclick="showPlot('map')">Choropleth Map</button>
+</div>
+
+<div>
+  <label for="yearSelector">Select Year:</label>
+  <select id="yearSelector"></select>
+
+  <label for="countryLimit">Top Countries:</label>
+  <select id="countryLimit">
+    <option value="10">Top 10</option>
+    <option value="20" selected>Top 20</option>
+    <option value="30">Top 30</option>
+    <option value="All">All</option>
+  </select>
+
+  <button id="playPauseBtn">Pause</button>
+</div>
+
+<!-- SCATTER PLOT -->
+<div id="scatterPlot" class="plot">
+  <svg width="1150" height="500">
+    <g transform="translate(70,100)">
+      <!-- D3 will draw scatter plot here -->
+    </g>
+
+    <!-- Scatter Plot Title -->
+    <text x="575" y="30" text-anchor="middle" font-size="18px" font-weight="bold">
+      Scatter Plot: Depression vs Anxiety Disorders
+    </text>
+
+    <!-- X-axis Label -->
+    <text x="575" y="490" text-anchor="middle" font-size="14px">
+      Depressive Disorders (%)
+    </text>
+
+    <!-- Y-axis Label -->
+    <text transform="rotate(-90)" x="-250" y="20" text-anchor="middle" font-size="14px">
+      Anxiety Disorders (%)
+    </text>
+  </svg>
+</div>
+
+<!-- BAR CHART -->
+<div id="barChart" class="plot">
+  <svg width="915" height="500">
+    <g transform="translate(70,60)">
+      <!-- D3 will draw bar chart here -->
+    </g>
+
+    <text x="430" y="30" text-anchor="middle" font-size="18px" font-weight="bold">
+      Bar Chart: Mental Health Disorders by Country
+    </text>
+
+    <text x="430" y="490" text-anchor="middle" font-size="14px">
+      Country
+    </text>
+
+    <text transform="rotate(-90)" x="-250" y="20" text-anchor="middle" font-size="14px">
+      Percentage of Population (%)
+    </text>
+  </svg>
+</div>
+
+<!-- CHOROPLETH MAP -->
+<div id="map" class="plot">
+  <svg width="1000" height="600">
+    <g transform="translate(70,100)">
+      <!-- D3 will draw choropleth map here -->
+    </g>
+
+    <text x="500" y="30" text-anchor="middle" font-size="18px" font-weight="bold">
+      Choropleth Map: Global Stress Distribution
+    </text>
+  </svg>
+</div>
+
+<!-- Tooltip -->
+<div class="tooltip" id="tooltip"></div>
+
+<script src="script.js"></script>
+
+<script>
+function showPlot(plotId) {
+  document.querySelectorAll('.plot').forEach(div => div.classList.remove('active'));
+  document.getElementById(plotId).classList.add('active');
+}
+</script>
+
+</body>
+</html>
+
+
