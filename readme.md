@@ -52,7 +52,8 @@ The project uses D3.js to create fully interactive visualizations, allowing user
 
 ---
 ### Screenshot of Framework:
-![image](https://github.com/user-attachments/assets/18b19b61-bcf7-4c2a-a99a-cd4825b8242a)
+![image](https://github.com/user-attachments/assets/6f09bd94-5ca2-4221-9b5c-1d0e69dde47d)
+
 
 ## Visualizations Used (and Explained)
 - Scatter Plot: Shows the relationship between two quantitative variables (Depression and Anxiety rates).
